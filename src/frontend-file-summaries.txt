@@ -1,0 +1,9 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up routing with TanStack Router, wraps the app with ThemeProvider, and configures the router with the Layout and LandingPage components.",
+  "frontend/src/components/Layout.tsx": "Root layout component that provides consistent structure across all pages with Navigation header, main content area with Outlet, and footer with attribution and copyright information.",
+  "frontend/src/components/Navigation.tsx": "Responsive navigation component with logo, desktop menu, and mobile sheet menu that provides consistent navigation across the application.",
+  "frontend/src/pages/LandingPage.tsx": "Landing page component featuring a hero section with welcome message, health status badge, feature cards showcasing InstaBhai benefits, and a call-to-action section.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hook that manages backend health check queries with automatic refetching every 30 seconds.",
+  "frontend/src/index.css": "Global styles with OKLCH-based Indian-inspired color system featuring warm saffron/orange primary colors, vibrant chart colors, and support for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom border radius values, font families, and font weights to support the vibrant Indian-inspired design system."
+}

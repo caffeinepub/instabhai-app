@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-landing-page-with-a-welcome-message-and-basic-navigation-structure",
+      "title": "Create a landing page with a welcome message and basic navigation structure",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-modern-vibrant-design-theme-with-warm-colors-orange-red-yellow-accents-inspired-by-indian-aesthetics-featuring-bold-typography-and-energetic-layouts-that-create-a-friendly-social-atmosphere",
+      "title": "Implement a modern, vibrant design theme with warm colors (orange, red, yellow accents) inspired by Indian aesthetics, featuring bold typography and energetic layouts that create a friendly, social atmosphere",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-2",
+      "summary": "Set up basic backend actor with a health check method that returns application status",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "InstaBhai App",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

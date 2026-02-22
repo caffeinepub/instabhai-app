@@ -1,0 +1,45 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-landing-page-with-a-welcome-message-and-basic-navigation-structure",
+      "featureTitle": "Create a landing page with a welcome message and basic navigation structure",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx",
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-modern-vibrant-design-theme-with-warm-colors-orange-red-yellow-accents-inspired-by-indian-aesthetics-featuring-bold-typography-and-energetic-layouts-that-create-a-friendly-social-atmosphere",
+      "featureTitle": "Implement a modern, vibrant design theme with warm colors (orange, red, yellow accents) inspired by Indian aesthetics, featuring bold typography and energetic layouts that create a friendly, social atmosphere",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

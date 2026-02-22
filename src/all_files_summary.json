@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Motoko actor with a single public query function `healthCheck` that returns \"Healthy\" status.",
+  "feature_evidence.json": "Feature evidence report documenting two implemented features: landing page with navigation and Indian-inspired vibrant design theme with warm colors.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of frontend source files describing routing, layout, navigation, landing page, health check hook, and styling configuration.",
+  "frontend/index.css": "Tailwind CSS base styles with OKLCH color system defining neutral grayscale variables for light and dark modes.",
+  "frontend/index.html": "HTML entry point with root div and module script loading main.tsx for the InstaBhai App.",
+  "frontend/src/App.tsx": "Root React component configuring TanStack Router with Layout and LandingPage, wrapped in ThemeProvider and QueryClientProvider.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component with Navigation header, main content outlet, and footer with caffeine.ai attribution and copyright.",
+  "frontend/src/components/Navigation.tsx": "Responsive navigation header with InstaBhai logo, desktop menu buttons, and mobile sheet menu for Home and Explore links.",
+  "frontend/src/hooks/useActor.ts": "React Query hook managing backend actor creation with Internet Identity authentication, invalidating dependent queries on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication with AuthClient, managing login state and identity lifecycle.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hook for backend health check with 30-second auto-refetch interval using the actor from useActor.",
+  "frontend/src/index.css": "Tailwind CSS with OKLCH-based Indian-inspired color palette featuring warm saffron/orange primary colors and vibrant chart colors for light and dark modes.",
+  "frontend/src/main.tsx": "React application entry point rendering App wrapped in QueryClientProvider and InternetIdentityProvider.",
+  "frontend/src/pages/LandingPage.tsx": "Landing page component featuring a hero section with gradient text, CTA buttons, health status badge, and feature cards showcasing InstaBhai's social platform capabilities using Lucide icons and shadcn/ui components.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration with custom OKLCH color system, extended theme including sidebar/chart colors, custom border radius variables, Inter font family, and animation keyframes for accordion components.",
+  "project_state.json": "Project state tracking file for InstaBhai App showing completed features (landing page, vibrant design theme) and pending backend health check implementation (REQ-2)."
+}

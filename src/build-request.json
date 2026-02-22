@@ -1,0 +1,63 @@
+{
+  "kind": "build_request",
+  "title": "Create initial application",
+  "projectName": "InstaBhai App",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a landing page with a welcome message and basic navigation structure",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page renders successfully",
+        "Welcome message is displayed prominently",
+        "Basic navigation structure is in place"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Set up basic backend actor with a health check method that returns application status",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend actor is initialized",
+        "Health check method returns a valid response",
+        "Frontend can successfully call the backend"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a modern, vibrant design theme with warm colors (orange, red, yellow accents) inspired by Indian aesthetics, featuring bold typography and energetic layouts that create a friendly, social atmosphere",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Consistent color scheme applied across all pages",
+        "Typography is clear and visually appealing",
+        "Layout feels welcoming and modern"
+      ]
+    }
+  ],
+  "constraints": [],
+  "nonGoals": [
+    "Advanced authentication features",
+    "Complex data models",
+    "Social media integrations"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
