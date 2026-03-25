@@ -1,11 +1,11 @@
-import { Outlet } from '@tanstack/react-router';
-import Navigation from './Navigation';
-import { Heart } from 'lucide-react';
+import { Outlet } from "@tanstack/react-router";
+import { Heart } from "lucide-react";
+import Navigation from "./Navigation";
 
 export default function Layout() {
   const currentYear = new Date().getFullYear();
   const appIdentifier = encodeURIComponent(
-    typeof window !== 'undefined' ? window.location.hostname : 'instabhai-app'
+    typeof window !== "undefined" ? window.location.hostname : "instabhai-app",
   );
 
   return (
@@ -18,9 +18,9 @@ export default function Layout() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col items-center justify-center gap-2 text-center">
             <p className="text-sm text-muted-foreground flex items-center gap-1.5">
-              Built with{' '}
-              <Heart className="w-4 h-4 fill-primary text-primary animate-pulse" />{' '}
-              using{' '}
+              Built with{" "}
+              <Heart className="w-4 h-4 fill-primary text-primary animate-pulse" />{" "}
+              using{" "}
               <a
                 href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`}
                 target="_blank"

@@ -10,7 +10,116 @@ import type { ActorMethod } from '@icp-sdk/core/agent';
 import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
-export interface _SERVICE { 'healthCheck' : ActorMethod<[], string> }
+export interface Comment {
+  'id' : bigint,
+  'content' : string,
+  'author' : Principal,
+  'timestamp' : bigint,
+  'postId' : bigint,
+}
+export type ExternalBlob = Uint8Array;
+export interface Message {
+  'id' : bigint,
+  'content' : string,
+  'sender' : Principal,
+  'timestamp' : bigint,
+  'receiver' : Principal,
+}
+export interface Notification {
+  'id' : bigint,
+  'notificationType' : NotificationType,
+  'recipient' : Principal,
+  'isRead' : boolean,
+  'timestamp' : bigint,
+  'relatedPostId' : [] | [bigint],
+  'relatedUser' : Principal,
+}
+export type NotificationType = { 'postLike' : null } |
+  { 'directMessage' : null } |
+  { 'newFollower' : null } |
+  { 'postComment' : null };
+export interface Post {
+  'id' : bigint,
+  'media' : ExternalBlob,
+  'author' : Principal,
+  'timestamp' : bigint,
+  'caption' : string,
+}
+export interface Story {
+  'id' : bigint,
+  'media' : ExternalBlob,
+  'author' : Principal,
+  'timestamp' : bigint,
+}
+export interface UserProfile {
+  'bio' : string,
+  'principal' : Principal,
+  'username' : string,
+  'displayName' : string,
+  'profilePicture' : [] | [ExternalBlob],
+}
+export type UserRole = { 'admin' : null } |
+  { 'user' : null } |
+  { 'guest' : null };
+export interface _CaffeineStorageCreateCertificateResult {
+  'method' : string,
+  'blob_hash' : string,
+}
+export interface _CaffeineStorageRefillInformation {
+  'proposed_top_up_amount' : [] | [bigint],
+}
+export interface _CaffeineStorageRefillResult {
+  'success' : [] | [boolean],
+  'topped_up_amount' : [] | [bigint],
+}
+export interface _SERVICE {
+  '_caffeineStorageBlobIsLive' : ActorMethod<[Uint8Array], boolean>,
+  '_caffeineStorageBlobsToDelete' : ActorMethod<[], Array<Uint8Array>>,
+  '_caffeineStorageConfirmBlobDeletion' : ActorMethod<
+    [Array<Uint8Array>],
+    undefined
+  >,
+  '_caffeineStorageCreateCertificate' : ActorMethod<
+    [string],
+    _CaffeineStorageCreateCertificateResult
+  >,
+  '_caffeineStorageRefillCashier' : ActorMethod<
+    [[] | [_CaffeineStorageRefillInformation]],
+    _CaffeineStorageRefillResult
+  >,
+  '_caffeineStorageUpdateGatewayPrincipals' : ActorMethod<[], undefined>,
+  '_initializeAccessControlWithSecret' : ActorMethod<[string], undefined>,
+  'addComment' : ActorMethod<[bigint, string], bigint>,
+  'assignCallerUserRole' : ActorMethod<[Principal, UserRole], undefined>,
+  'createPost' : ActorMethod<[ExternalBlob, string], bigint>,
+  'createStory' : ActorMethod<[ExternalBlob], bigint>,
+  'deleteComment' : ActorMethod<[bigint], undefined>,
+  'followUser' : ActorMethod<[Principal], undefined>,
+  'getActiveStories' : ActorMethod<[], Array<Story>>,
+  'getCallerUserProfile' : ActorMethod<[], [] | [UserProfile]>,
+  'getCallerUserRole' : ActorMethod<[], UserRole>,
+  'getConversation' : ActorMethod<[Principal], Array<Message>>,
+  'getExplorePosts' : ActorMethod<[], Array<Post>>,
+  'getFeed' : ActorMethod<[], Array<Post>>,
+  'getFollowers' : ActorMethod<[Principal], Array<Principal>>,
+  'getFollowing' : ActorMethod<[Principal], Array<Principal>>,
+  'getNotifications' : ActorMethod<[], Array<Notification>>,
+  'getPost' : ActorMethod<[bigint], [] | [Post]>,
+  'getPostComments' : ActorMethod<[bigint], Array<Comment>>,
+  'getPostLikes' : ActorMethod<[bigint], Array<Principal>>,
+  'getUserPosts' : ActorMethod<[Principal], Array<Post>>,
+  'getUserProfile' : ActorMethod<[Principal], [] | [UserProfile]>,
+  'healthCheck' : ActorMethod<[], string>,
+  'isCallerAdmin' : ActorMethod<[], boolean>,
+  'likePost' : ActorMethod<[bigint], undefined>,
+  'markNotificationRead' : ActorMethod<[bigint], undefined>,
+  'markStoryViewed' : ActorMethod<[bigint], undefined>,
+  'saveCallerUserProfile' : ActorMethod<[UserProfile], undefined>,
+  'searchUsers' : ActorMethod<[string], Array<UserProfile>>,
+  'sendMessage' : ActorMethod<[Principal, string], bigint>,
+  'unfollowUser' : ActorMethod<[Principal], undefined>,
+  'unlikePost' : ActorMethod<[bigint], undefined>,
+}
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];
 export declare const idlFactory: IDL.InterfaceFactory;
